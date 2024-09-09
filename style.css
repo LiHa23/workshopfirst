@@ -19,6 +19,7 @@ body {
     align-items: center;
     grid-template-columns: repeat(3, var(--cell-size));
 }
+
 .cell {
 	width: var(--cell-size);
 	height: var(--cell-size);
@@ -28,4 +29,16 @@ body {
 	align-items: center;
 	position: relative;
 	cursor: pointer;
+}
+
+.x, .o {
+	display: none; /* Dölj båda symbolerna från början */
+}
+
+.cell.x .x {
+	display: block; /* Visa 'x' när cellen har klassen 'x' */
+}
+
+.cell.o .o {
+	display: block; /* Visa 'o' när cellen har klassen 'o' */
 }
